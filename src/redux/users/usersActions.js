@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 export const getUsers = () => async dispatch => {
   try {
@@ -20,4 +20,11 @@ export const getUsers = () => async dispatch => {
       type: 'FETCH_USERS_FAILURE'
     })
   }
-};
+}
+
+export const findMatches = (query) => ({
+  type: 'FIND_MATCHES',
+  payload: {
+    query
+  }
+})

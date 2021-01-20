@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import SearchBar from './SearchBar';
+import React from 'react'
+import { connect } from 'react-redux'
+
+import SearchBar from './SearchBar'
+import HintBar from './HintBar'
 
 import './Search.css'
 
-function Search ({users}) {
-    const [query, setQuery] = useState('')
-
-    const getQuery = (text) => setQuery(text)
-
-    return (
-        <div className='search__container'>
-            <SearchBar getQuery={getQuery} />
-        </div>
-    )
+function Search ({ matchedUsers }) {
+  return (
+    <div className='search__container'>
+      <SearchBar />
+      {
+                matchedUsers.map(user => <HintBar key={user.id} user={user} />)
+            }
+    </div>
+  )
 }
 
 const mapStateToProps = state => {
-    const {users} = state
-    return {
-      users
-    }
-  };
-  
+  return {
+    matchedUsers: state.users.matchedUsers
+  }
+}
 
-export default connect(
-  mapStateToProps,
-)(Search);
-  
+export default connect(mapStateToProps)(Search)

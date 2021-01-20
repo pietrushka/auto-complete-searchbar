@@ -6,8 +6,9 @@
 }
 
 .search-bar__label {
-    width: 1em;
+    width: 1.5em ;
     height: 1em;
+    padding-left: .5em;
 }
 
 .search-icon {
@@ -23,6 +24,6 @@
     background-color: transparent; 
     outline: 0;
     font-size: 1em;
-    padding-left: .5em;
+    padding: .5em 0 .5em .5em;
     color: var(--graphite);
 }

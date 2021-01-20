@@ -1,0 +1,7 @@
+.hint__container {
+    padding: .5em;
+}
+
+.marked {
+    color: var(--blue);
+}
