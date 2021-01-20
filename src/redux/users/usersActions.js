@@ -9,8 +9,6 @@ export const getUsers = () => async dispatch => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users')
     const users = response.data
 
-    console.log({users})
-
     dispatch({
       type: 'FETCH_USERS_SUCCESS',
       payload: {

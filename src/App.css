@@ -1,4 +1,10 @@
---gray-bg: #E6E6EE;
+:root {
+  --gray-bg: #E6E6EE;
+  --gray-dark: #A8AAB9;
+  --gray-light: #F7F8FB;
+  --graphite: #343646;
+  --blue: #2698FE;
+}
 
 body {
   margin: 0;
@@ -7,7 +13,7 @@ body {
   left: 0; 
   width: 100vw;
   height: 100vh;
-  background-color: var(--gray-gb); 
+  background-color: var(--gray-bg); 
 }
 
 * {

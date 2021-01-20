@@ -1,0 +1,16 @@
+.search__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--gray-light);
+    font-size: 1rem;
+    border-radius: .5em;
+    padding: .5em;
+}
+
+.search__container[type='open'] {
+    transform: scale(1.1);
+}

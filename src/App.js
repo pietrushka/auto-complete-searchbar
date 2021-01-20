@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getUsers } from './redux/users/usersActions';
 
 import './App.css';
+import Search from './components/Search';
 
 const App = ({ fetchData }) => {
 
@@ -12,9 +13,7 @@ const App = ({ fetchData }) => {
   }, [])
 
   return (
-    <div className="App">
-      123
-    </div>
+    <Search />
   );
 };
 
