@@ -3,8 +3,11 @@ import { connect } from 'react-redux'
 
 import './HintBar.css'
 
-function HintBar ({ user: { name }, query }) {
+function HintBar ({ displayUser, isFocused, user, query }) {
+  
+
   const markName = () => {
+    const {name} = user
     const nameLowercase = name.toLowerCase()
     const queryLowercase = query.toLowerCase()
     const queryFirstIdx = nameLowercase.indexOf(queryLowercase)
@@ -19,8 +22,15 @@ function HintBar ({ user: { name }, query }) {
     )
   }
 
+
+
   return (
-    <div className='hint__container'>{markName()}</div>
+    <div 
+      className={`hint__container ${isFocused && 'focused'}`} 
+      onClick={displayUser}
+    >
+      {markName()}
+    </div>
   )
 }
 

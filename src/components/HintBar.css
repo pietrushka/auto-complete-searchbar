@@ -3,6 +3,7 @@
     cursor: pointer;
 }
 
+.hint__container.focused,
 .hint__container:hover {
     background-color: var(--gray-bg);
 }

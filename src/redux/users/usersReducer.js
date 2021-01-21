@@ -37,7 +37,6 @@ const usersReducer = (state = INITIAL_STATE, action) => {
           const queryLowercase = query.toLowerCase()
           const nameArr = nameLowercase.split(' ')
 
-          console.log({ nameArr })
           let result = false
 
           nameArr.forEach(word => {
