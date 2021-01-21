@@ -1,26 +1,18 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 import SearchBar from './SearchBar'
-import HintBar from './HintBar'
+import HintBox from './HintBox'
 
 import './Search.css'
 
-function Search ({ matchedUsers }) {
+function Search () {
   return (
     <div className='search__container'>
       <SearchBar />
-      {
-                matchedUsers.map(user => <HintBar key={user.id} user={user} />)
-            }
+      <HintBox />
     </div>
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    matchedUsers: state.users.matchedUsers
-  }
-}
 
-export default connect(mapStateToProps)(Search)
+export default Search

@@ -1,9 +1,9 @@
 
 const INITIAL_STATE = {
-  loading: false,
-  query: '',
   users: [],
-  matchedUsers: []
+  matchedUsers: [],
+  query: '',
+  error: null
 }
 
 const usersReducer = (state = INITIAL_STATE, action) => {
@@ -13,19 +13,19 @@ const usersReducer = (state = INITIAL_STATE, action) => {
     case 'FETCH_USERS_START':
       return {
         ...state,
-        loading: true
+        error: null
       }
     case 'FETCH_USERS_SUCCESS':
       return {
         ...state,
-        loading: false,
         users: payload.users
       }
     case 'FETCH_USERS_FAILURE':
       return {
         ...state,
-        loading: false
+        error: payload.error
       }
+      
     case 'FIND_MATCHES':
       const { query } = payload
 

@@ -5,6 +5,7 @@ import { getUsers } from './redux/users/usersActions'
 
 import './App.css'
 import Search from './components/Search'
+import Alert from './components/Alert'
 
 const App = ({ fetchData }) => {
   useEffect(() => {
@@ -12,7 +13,10 @@ const App = ({ fetchData }) => {
   }, [])
 
   return (
-    <Search />
+    <>
+      <Alert />
+      <Search />
+    </>
   )
 }
 

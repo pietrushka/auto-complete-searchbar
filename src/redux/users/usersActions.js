@@ -17,7 +17,10 @@ export const getUsers = () => async dispatch => {
     })
   } catch (error) {
     dispatch({
-      type: 'FETCH_USERS_FAILURE'
+      type: 'FETCH_USERS_FAILURE',
+      payload: {
+        error: 'Conection error'
+      }
     })
   }
 }

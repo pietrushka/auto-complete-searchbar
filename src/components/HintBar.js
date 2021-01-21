@@ -11,9 +11,9 @@ function HintBar ({ user: { name }, query }) {
     const queryLastIdx = queryFirstIdx + query.length
 
     return (
-      <span>
+      <span className='hintbar__text'>
         {name.slice(0, queryFirstIdx)}
-        <span className='marked'>{name[queryFirstIdx] + query.slice(1)}</span>
+        <span className='hintbar__text--marked'>{name[queryFirstIdx] + query.slice(1)}</span>
         {name.slice(queryLastIdx)}
       </span>
     )

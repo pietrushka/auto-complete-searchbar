@@ -1,7 +1,16 @@
 .hint__container {
-    padding: .5em;
+    padding: .25em;
+    cursor: pointer;
 }
 
-.marked {
+.hint__container:hover {
+    background-color: var(--gray-bg);
+}
+
+.hintbar__text {
+    margin-left: 2.5rem;
+}
+
+.hintbar__text--marked {
     color: var(--blue);
 }
